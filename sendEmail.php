@@ -13,7 +13,7 @@ foreach ($userMonths as $user => $months) {
         if($month == $monthNames[date('m') - 1]){
             $getUser = getUserByName($user);
             $userName = $getUser['fullName'];
-            if(date('d') >= 20){
+            if(date('d') >= 28){
                 $admin = getAdministrator();
                 $to = $getUser['email'];
                 $subject = "Spotify payment reminder";
@@ -36,7 +36,7 @@ foreach ($userMonths as $user => $months) {
             <br><hr><br>
             <h3>
                 <?php
-                    if(date('d') >= 20){
+                    if(date('d') >= 28){
                         echo 'Sending email right now...';
                     } else{
                         echo 'Email will be sent after 20 of this month';

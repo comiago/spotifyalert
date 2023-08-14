@@ -84,7 +84,6 @@ function loginUser($email, $pwd){
     } else if($check === true){
         session_start();
         $_SESSION["id"] = $userExists['idUser'];
-        $_SESSION["username"] = $userExists['username'];
         header('Location: /dashboard.php', true);
         exit();
     }
@@ -101,8 +100,6 @@ function checkAdministrator($id){
         return false;
     }
 }
-
-// DASHBOARD
 
 function getUser($id){
     global $connection;

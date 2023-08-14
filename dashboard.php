@@ -1,7 +1,9 @@
 <?php 
 
-session_start();
-$includeStylesheets = false;
+if(session_status() != PHP_SESSION_ACTIVE){
+    session_start();
+}
+$includeStylesheets = true;
 
 if (isset($_SESSION['id'])):
     require 'sections/header.php'; 
