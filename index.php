@@ -2,6 +2,7 @@
 
 $headerLoaded = true;
 $footerLoaded = true;
+$footerLoaded = true;
 
 require 'sections/header.php';
 require 'sections/login.php';

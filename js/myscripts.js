@@ -3,7 +3,7 @@ $(document).ready(() => {
         $.ajax({
             url: "/dbh/resurces.php",
             method: "POST",
-            data:{function:"getUsers"},
+            data:{function:"getCalendar"},
             success:function(data){
                 console.log(data);
                 $('#calendarTable').html(data);

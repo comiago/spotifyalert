@@ -1,6 +1,7 @@
 <?php 
 
 session_start();
+$includeStylesheets = false;
 
 if (isset($_SESSION['id'])):
     require 'sections/header.php'; 

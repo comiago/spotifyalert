@@ -111,3 +111,19 @@ function getUser($id){
     $row = mysqli_fetch_array($result);
     return $row;
 }
+
+function getAdministrator(){
+    global $connection;
+    $query = "SELECT * FROM user WHERE role = 1";
+    $result = mysqli_query($connection, $query);
+    $row = mysqli_fetch_array($result);
+    return $row;
+}
+
+function getUserByName($name){
+    global $connection;
+    $query = "SELECT * FROM user WHERE fullName = '$name'";
+    $result = mysqli_query($connection, $query);
+    $row = mysqli_fetch_array($result);
+    return $row;
+}
